@@ -1,3 +1,4 @@
 venv
 app/frontend/node_modules
-app/backend/takemeter_model/model.safetensors
+app/backend/takemeter_model
+*.zip

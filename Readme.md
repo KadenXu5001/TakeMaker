@@ -4,6 +4,39 @@ A fine-tuned DistilBERT text classifier that evaluates the quality of posts on r
 
 ---
 
+## Demo Video
+
+<!-- Replace the link below with your actual demo video URL -->
+[![TakeMeter Demo](https://img.shields.io/badge/Watch-Demo%20Video-red?logo=youtube)](https://youtu.be/dJdEA7gAo7c)
+
+The demo walks through:
+
+1. **Live classification** — pasting r/nba posts into the model and seeing predicted labels with confidence scores
+2. **Baseline comparison** — running the same posts through the zero-shot LLaMA-3.3-70B baseline to show the accuracy gap
+3. **Edge case walkthrough** — demoing the three hardest misclassification patterns identified in the evaluation report
+
+---
+
+## Hugging Face
+
+The fine-tuned model is hosted on the HuggingFace Hub:
+
+**Model:** [`Catty5001/TakeMakerModel`](https://huggingface.co/Catty5001/TakeMakerModel)
+
+```python
+from transformers import pipeline
+
+classifier = pipeline("text-classification", model="Catty5001/TakeMakerModel")
+
+post = "Offensively the Pacers rank 4th in pace and 7th in points in the paint this season."
+result = classifier(post)
+# [{'label': 'analysis', 'score': 0.94}]
+```
+
+Labels map directly to the taxonomy defined in this repo: `analysis`, `hot_take`, `reaction`.
+
+---
+
 ## Community Choice
 
 **r/nba** — one of Reddit's most active sports communities, with thousands of posts daily ranging from rigorous statistical breakdowns to pure emotional reactions. The discourse quality gap is wide and real: a post citing PER, true shooting %, and historical comparisons sits in a completely different category than "bro this take is cooked 💀". This variance makes r/nba a strong fit for a classification task — the labels are grounded in distinctions that community members themselves make constantly.
