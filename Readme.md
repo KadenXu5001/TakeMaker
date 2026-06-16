@@ -7,13 +7,8 @@ A fine-tuned DistilBERT text classifier that evaluates the quality of posts on r
 ## Demo Video
 
 <!-- Replace the link below with your actual demo video URL -->
+
 [![TakeMeter Demo](https://img.shields.io/badge/Watch-Demo%20Video-red?logo=youtube)](https://youtu.be/dJdEA7gAo7c)
-
-The demo walks through:
-
-1. **Live classification** — pasting r/nba posts into the model and seeing predicted labels with confidence scores
-2. **Baseline comparison** — running the same posts through the zero-shot LLaMA-3.3-70B baseline to show the accuracy gap
-3. **Edge case walkthrough** — demoing the three hardest misclassification patterns identified in the evaluation report
 
 ---
 
@@ -149,28 +144,28 @@ Baseline was run on the same locked 37-example test set before fine-tuning began
 
 ### Overall accuracy
 
-| Model                              | Accuracy | Improvement        |
-| ---------------------------------- | -------- | ------------------ |
-| Zero-shot LLaMA-3.3-70B (baseline) | 50.0%    | —                  |
-| Fine-tuned DistilBERT              | **86.8%**    | **+36.8 percentage points** |
+| Model                              | Accuracy  | Improvement                 |
+| ---------------------------------- | --------- | --------------------------- |
+| Zero-shot LLaMA-3.3-70B (baseline) | 50.0%     | —                           |
+| Fine-tuned DistilBERT              | **86.8%** | **+36.8 percentage points** |
 
 ### Per-class metrics (fine-tuned model)
 
-| Label         | Precision | Recall   | F1       | Support |
-| ------------- | --------- | -------- | -------- | ------- |
-| `analysis`    | 1.000     | 0.667    | 0.800    | 9       |
-| `hot_take`    | 0.800     | 0.941    | 0.865    | 17      |
-| `reaction`    | 0.917     | 0.917    | 0.917    | 12      |
-| **macro avg** | **0.906** | **0.842**| **0.861**|         |
+| Label         | Precision | Recall    | F1        | Support |
+| ------------- | --------- | --------- | --------- | ------- |
+| `analysis`    | 1.000     | 0.667     | 0.800     | 9       |
+| `hot_take`    | 0.800     | 0.941     | 0.865     | 17      |
+| `reaction`    | 0.917     | 0.917     | 0.917     | 12      |
+| **macro avg** | **0.906** | **0.842** | **0.861** |         |
 
 ### Per-class metrics (baseline)
 
-| Label         | Precision | Recall   | F1       | Support |
-| ------------- | --------- | -------- | -------- | ------- |
-| `analysis`    | 0.375     | 0.333    | 0.353    | 9       |
-| `hot_take`    | 0.444     | 0.235    | 0.308    | 17      |
-| `reaction`    | 0.571     | 1.000    | 0.727    | 12      |
-| **macro avg** | **0.464** | **0.523**| **0.463**|         |
+| Label         | Precision | Recall    | F1        | Support |
+| ------------- | --------- | --------- | --------- | ------- |
+| `analysis`    | 0.375     | 0.333     | 0.353     | 9       |
+| `hot_take`    | 0.444     | 0.235     | 0.308     | 17      |
+| `reaction`    | 0.571     | 1.000     | 0.727     | 12      |
+| **macro avg** | **0.464** | **0.523** | **0.463** |         |
 
 Note: the baseline's reaction recall of 1.000 means it classified nearly everything as `reaction` — inflating that class while badly missing `analysis` and `hot_take`.
 
@@ -184,13 +179,13 @@ Note: the baseline's reaction recall of 1.000 means it classified nearly everyth
 
 ### Sample classifications
 
-| Post                                                                                                                                                                                                                      | Predicted Label | Confidence |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ---------- |
-| "Ja Morant would be a top-3 player in the league if he could stay healthy and stay focused. The talent is there."                                                                                                         | `hot_take`      | 0.573      |
-| "The ref situation in this league is completely out of control. It's been rigged against small-market teams for two decades."                                                                                              | `hot_take`      | 0.530      |
-| "This is not the time for cool heads. This team just broke my heart AGAIN."                                                                                                                                               | `reaction`      | 0.498      |
-| "Offensively the Pacers rank 4th in pace and 7th in points in the paint this season. Their transition offense generates 18.3 PPG which is 2nd in the league. This is a system built around speed not star power."        | `analysis`      | 0.436      |
-| "The Nuggets' three-peat probability based on historical models: 22%. Every team that has won back-to-back since 2005 has faced roster attrition via salary cap. Denver has three players entering extension years simultaneously." | `analysis` | 0.423 |
+| Post                                                                                                                                                                                                                                | Predicted Label | Confidence |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- | ---------- |
+| "Ja Morant would be a top-3 player in the league if he could stay healthy and stay focused. The talent is there."                                                                                                                   | `hot_take`      | 0.573      |
+| "The ref situation in this league is completely out of control. It's been rigged against small-market teams for two decades."                                                                                                       | `hot_take`      | 0.530      |
+| "This is not the time for cool heads. This team just broke my heart AGAIN."                                                                                                                                                         | `reaction`      | 0.498      |
+| "Offensively the Pacers rank 4th in pace and 7th in points in the paint this season. Their transition offense generates 18.3 PPG which is 2nd in the league. This is a system built around speed not star power."                   | `analysis`      | 0.436      |
+| "The Nuggets' three-peat probability based on historical models: 22%. Every team that has won back-to-back since 2005 has faced roster attrition via salary cap. Denver has three players entering extension years simultaneously." | `analysis`      | 0.423      |
 
 ### Wrong predictions analyzed
 
