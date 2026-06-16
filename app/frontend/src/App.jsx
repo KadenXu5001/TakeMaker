@@ -131,8 +131,7 @@ export default function App() {
             What kind of take is this?
           </h1>
           <p style={{ color: "#475569", marginTop: 10, fontSize: 15, lineHeight: 1.6 }}>
-            Fine-tuned DistilBERT classifying r/nba discourse.
-            Paste any post or comment below.
+            Fine-tuned DistilBERT classifying r/nba discourse on game threads.
           </p>
         </div>
 
