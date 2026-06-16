@@ -1,0 +1,6 @@
+Text,TrueLabel,PredictedLabel,Confidence,ErrorType
+"Haliburton is better than Luka right now and I will die on this hill.",hot_take,reaction,0.459,Strong conviction phrase triggered reaction classification
+"Milwaukee's bench scored 14 points in 48 minutes of game action. That is the whole story.",analysis,hot_take,0.448,Conclusory framing overrode statistical content
+"The Thunder's youth movement is the most sustainable rebuild in the league. They have four first-round picks in the next two drafts and a core under 24.",analysis,hot_take,0.465,Superlative opening overrode supporting evidence in second sentence
+"Minnesota's switch-everything defense allows 0.84 PPP on all isolation — that is elite. Their transition defense (0.98 PPP) is where they are vulnerable. Dallas should be pushing pace on every possession.",analysis,hot_take,0.456,Prescriptive conclusion shifted classification despite dense statistics
+"That was the single greatest individual playoff performance I have witnessed in person.",reaction,hot_take,0.443,Calm phrasing without all-caps diverges from prototypical reaction pattern

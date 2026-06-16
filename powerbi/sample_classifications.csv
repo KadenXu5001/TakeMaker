@@ -1,0 +1,6 @@
+Text,PredictedLabel,Confidence,Correct
+"Ja Morant would be a top-3 player in the league if he could stay healthy and stay focused. The talent is there.",hot_take,0.573,TRUE
+"The ref situation in this league is completely out of control. It's been rigged against small-market teams for two decades.",hot_take,0.530,TRUE
+"This is not the time for cool heads. This team just broke my heart AGAIN.",reaction,0.498,TRUE
+"Offensively the Pacers rank 4th in pace and 7th in points in the paint this season. Their transition offense generates 18.3 PPG which is 2nd in the league. This is a system built around speed not star power.",analysis,0.436,TRUE
+"The Nuggets' three-peat probability based on historical models: 22%. Every team that has won back-to-back since 2005 has faced roster attrition via salary cap. Denver has three players entering extension years simultaneously.",analysis,0.423,TRUE

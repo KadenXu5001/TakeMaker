@@ -1,0 +1,4 @@
+Label,TotalCount,TrainCount,ValCount,TestCount,Percentage
+analysis,60,42,9,9,23.8
+hot_take,109,76,16,17,43.3
+reaction,83,58,13,12,32.9

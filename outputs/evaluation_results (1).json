@@ -1,0 +1,148 @@
+{
+  "fine_tuned_model": {
+    "overall_accuracy": 0.8684,
+    "per_class": {
+      "analysis": {
+        "precision": 1.0,
+        "recall": 0.667,
+        "f1": 0.8,
+        "support": 9.0
+      },
+      "hot_take": {
+        "precision": 0.8,
+        "recall": 0.941,
+        "f1": 0.865,
+        "support": 17.0
+      },
+      "reaction": {
+        "precision": 0.917,
+        "recall": 0.917,
+        "f1": 0.917,
+        "support": 12.0
+      }
+    },
+    "macro_avg": {
+      "precision": 0.906,
+      "recall": 0.842,
+      "f1": 0.861
+    },
+    "confusion_matrix": {
+      "labels": [
+        "analysis",
+        "hot_take",
+        "reaction"
+      ],
+      "matrix": [
+        [
+          6,
+          3,
+          0
+        ],
+        [
+          0,
+          16,
+          1
+        ],
+        [
+          0,
+          1,
+          11
+        ]
+      ]
+    }
+  },
+  "wrong_predictions": [
+    {
+      "text": "Haliburton is better than Luka right now and I will die on this hill.",
+      "true_label": "hot_take",
+      "predicted_label": "reaction",
+      "confidence": 0.4587954580783844
+    },
+    {
+      "text": "Milwaukee's bench scored 14 points in 48 minutes of game action. That is the whole story.",
+      "true_label": "analysis",
+      "predicted_label": "hot_take",
+      "confidence": 0.44773346185684204
+    },
+    {
+      "text": "The Thunder's youth movement is the most sustainable rebuild in the league. They have four first-round picks in the next two drafts and a core under 24.",
+      "true_label": "analysis",
+      "predicted_label": "hot_take",
+      "confidence": 0.46489638090133667
+    },
+    {
+      "text": "Minnesota's switch-everything defense allows 0.84 PPP on all isolation ? that is elite. Their transition defense (0.98 PPP) is where they are vulnerable. Dallas should be pushing pace on every possession.",
+      "true_label": "analysis",
+      "predicted_label": "hot_take",
+      "confidence": 0.45565328001976013
+    },
+    {
+      "text": "That was the single greatest individual playoff performance I have witnessed in person.",
+      "true_label": "reaction",
+      "predicted_label": "hot_take",
+      "confidence": 0.44256308674812317
+    }
+  ],
+  "sample_classifications": [
+    {
+      "text": "Ja Morant would be a top-3 player in the league if he could stay healthy and stay focused. The talent is there.",
+      "predicted_label": "hot_take",
+      "confidence": 0.572995662689209,
+      "correct": true
+    },
+    {
+      "text": "The ref situation in this league is completely out of control. It's been rigged against small-market teams for two decades.",
+      "predicted_label": "hot_take",
+      "confidence": 0.5297619104385376,
+      "correct": true
+    },
+    {
+      "text": "This is not the time for cool heads. This team just broke my heart AGAIN.",
+      "predicted_label": "reaction",
+      "confidence": 0.49758002161979675,
+      "correct": true
+    },
+    {
+      "text": "Offensively the Pacers rank 4th in pace and 7th in points in the paint this season. Their transition offense generates 18.3 PPG which is 2nd in the league. This is a system built around speed not star power.",
+      "predicted_label": "analysis",
+      "confidence": 0.4362824261188507,
+      "correct": true
+    },
+    {
+      "text": "The Nuggets' three-peat probability based on historical models: 22%. Every team that has won back-to-back since 2005 has faced roster attrition via salary cap. Denver has three players entering extension years simultaneously.",
+      "predicted_label": "analysis",
+      "confidence": 0.4226750135421753,
+      "correct": true
+    }
+  ],
+  "baseline_model": {
+    "name": "llama-3.3-70b-versatile (zero-shot via Groq)",
+    "overall_accuracy": 0.5,
+    "per_class": {
+      "analysis": {
+        "precision": 0.375,
+        "recall": 0.333,
+        "f1": 0.353,
+        "support": 9.0
+      },
+      "hot_take": {
+        "precision": 0.444,
+        "recall": 0.235,
+        "f1": 0.308,
+        "support": 17.0
+      },
+      "reaction": {
+        "precision": 0.571,
+        "recall": 1.0,
+        "f1": 0.727,
+        "support": 12.0
+      }
+    },
+    "macro_avg": {
+      "precision": 0.464,
+      "recall": 0.523,
+      "f1": 0.463
+    },
+    "unparseable_responses": 0
+  }
+}

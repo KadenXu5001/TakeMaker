@@ -1,0 +1,7 @@
+Model,Label,Precision,Recall,F1,Support
+Fine-tuned DistilBERT,analysis,1.000,0.667,0.800,9
+Fine-tuned DistilBERT,hot_take,0.800,0.941,0.865,17
+Fine-tuned DistilBERT,reaction,0.917,0.917,0.917,12
+Zero-shot LLaMA-3.3-70B (baseline),analysis,0.375,0.333,0.353,9
+Zero-shot LLaMA-3.3-70B (baseline),hot_take,0.444,0.235,0.308,17
+Zero-shot LLaMA-3.3-70B (baseline),reaction,0.571,1.000,0.727,12

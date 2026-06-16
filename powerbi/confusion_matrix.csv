@@ -1,0 +1,10 @@
+TrueLabel,PredictedLabel,Count
+analysis,analysis,6
+analysis,hot_take,3
+analysis,reaction,0
+hot_take,analysis,0
+hot_take,hot_take,16
+hot_take,reaction,1
+reaction,analysis,0
+reaction,hot_take,1
+reaction,reaction,11
